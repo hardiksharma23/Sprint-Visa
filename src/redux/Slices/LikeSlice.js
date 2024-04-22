@@ -1,14 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,nanoid } from "@reduxjs/toolkit";
+
+const initialState = {
+    todos: [{id:1, text: "Hello World"}]
+}
 
 
 export const LikeSlice = createSlice({
     name:"like",
-    initialState:[],
+    initialState,
     reducers:{
-        add:() => {},
-        remove:() => {},
+        addTodo: (state,action) => {
+            const todo = {
+                id:nanoid(),
+                text: action.payload
+            }
+            state.todos.push(todo)
+        }
     }
 })
 
-export const {add,remove} = LikeSlice.actions;
+export const {addTodo} = LikeSlice.actions;
 export default LikeSlice.reducer;
