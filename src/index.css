@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-shape-divider-bottom-1714080417 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1714080417 svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 126px;
+}
+
+.custom-shape-divider-bottom-1714080417 .shape-fill {
+    fill: #0F172A;
+}
